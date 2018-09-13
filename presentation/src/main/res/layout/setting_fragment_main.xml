@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorbackgroundbluewhite">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="5dp"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D6DBE9"
+                android:id="@+id/setting_main_theme_btn"
+                android:drawableLeft="@drawable/ic_color_lens_black_24dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Theme"
+                android:textColor="#28292C"
+                android:textSize="16sp"
+                android:layout_marginLeft="30dp"
+                android:layout_centerVertical="true"
+                android:elevation="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/setting_main_theme_textview"
+                android:text="Midnight Blue (Light)"
+                android:elevation="18dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:backgroundTint="#28292C"
+                android:background="?android:attr/listDivider"
+                />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="5dp"
+                >
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#D6DBE9"
+                    android:id="@+id/setting_main_reminder_display_view_btn"
+                    android:drawableLeft="@drawable/ic_list_black_24dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reminder display view"
+                    android:textColor="#28292C"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_centerVertical="true"
+                    android:elevation="15dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/setting_main_reminder_display_view_textview"
+                    android:text="Standard"
+                    android:elevation="18dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"
+                    />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:backgroundTint="#28292C"
+                android:background="?android:attr/listDivider"
+                />
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="5dp"
+                >
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#D6DBE9"
+                    android:id="@+id/setting_main_delete_confirmation_btn"
+                    android:drawableLeft="@drawable/ic_delete_forever_black_24dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Theme"
+                    android:textColor="#28292C"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_centerVertical="true"
+                    android:elevation="15dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/setting_main_delete_confirmation_textview"
+                    android:text="Enabled"
+                    android:elevation="18dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"
+                    />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:backgroundTint="#28292C"
+                android:background="?android:attr/listDivider"
+                /> <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="5dp"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D6DBE9"
+                android:id="@+id/setting_main_showkeyboard_btn"
+                android:drawableLeft="@drawable/ic_keyboard_black_24dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show keyboard immediately"
+                android:textColor="#28292C"
+                android:textSize="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_centerVertical="true"
+                android:elevation="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/setting_main_showkeyboard_textview"
+                android:text="Disabled"
+                android:elevation="18dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:backgroundTint="#28292C"
+                android:background="?android:attr/listDivider"
+                /> <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="5dp"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D6DBE9"
+                android:id="@+id/setting_main_datetimepicker"
+                android:drawableLeft="@drawable/ic_event_black_24dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date and Time Pcker"
+                android:textColor="#28292C"
+                android:textSize="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_centerVertical="true"
+                android:elevation="15dp"/>
+
+        </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:backgroundTint="#28292C"
+                android:background="?android:attr/listDivider"
+                /> <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="5dp"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D6DBE9"
+                android:id="@+id/setting_main_notification_sound"
+                android:drawableLeft="@drawable/ic_music_note_black_24dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notification Sound"
+                android:textColor="#28292C"
+                android:textSize="15sp"
+                android:layout_marginLeft="30dp"
+                android:layout_centerVertical="true"
+                android:elevation="15dp"/>
+
+        </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:backgroundTint="#28292C"
+                android:background="?android:attr/listDivider"
+                /> <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="5dp"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D6DBE9"
+                android:id="@+id/setting_main_vibration"
+                android:drawableLeft="@drawable/ic_vibration_black_24dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notification Sound"
+                android:textColor="#28292C"
+                android:textSize="15sp"
+                android:layout_marginLeft="30dp"
+                android:layout_centerVertical="true"
+                android:elevation="15dp"/>
+
+        </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:backgroundTint="#28292C"
+                android:background="?android:attr/listDivider"
+                /><RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="5dp"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D6DBE9"
+                android:id="@+id/setting_main_popup_notification"
+                android:drawableLeft="@drawable/ic_speaker_notes_black_24dp"
+                />
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Popup Notification"
+                android:textColor="#28292C"
+                android:textSize="15sp"
+                android:layout_marginLeft="30dp"
+                android:layout_centerVertical="true"
+                android:elevation="15dp"/>
+
+        </RelativeLayout>
+            <View
+                android:backgroundTint="#28292C"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                /> <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="5dp"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D6DBE9"
+                android:id="@+id/setting_main_quite_hours"
+                android:drawableLeft="@drawable/ic_volume_off_black_24dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hourly Reminder - Quite Hours"
+                android:textColor="#28292C"
+                android:textSize="15sp"
+                android:layout_marginLeft="30dp"
+                android:layout_centerVertical="true"
+                android:elevation="15dp"/>
+
+        </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:backgroundTint="#28292C"
+                android:background="?android:attr/listDivider"
+                /> <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="5dp"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D6DBE9"
+                android:id="@+id/setting_main_default_snooze_duration"
+                android:drawableLeft="@drawable/ic_snooze_black_24dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Default snooze duration"
+                android:textColor="#28292C"
+                android:textSize="15sp"
+                android:layout_marginLeft="30dp"
+                android:layout_centerVertical="true"
+                android:elevation="15dp"/>
+
+        </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:backgroundTint="#28292C"
+                android:background="?android:attr/listDivider"
+                /> <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="5dp"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D6DBE9"
+                android:id="@+id/setting_main_turn_screen"
+                android:drawableLeft="@drawable/ic_flare_black_24dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Turn on screen during notification ?"
+                android:textColor="#28292C"
+                android:textSize="15sp"
+                android:layout_marginLeft="30dp"
+                android:layout_centerVertical="true"
+                android:elevation="15dp"/>
+
+        </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:backgroundTint="#28292C"
+                android:background="?android:attr/listDivider"
+                /> <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="5dp"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D6DBE9"
+                android:id="@+id/setting_main_notification_title"
+                android:drawableLeft="@drawable/ic_chat_black_24dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notification Title"
+                android:textColor="#28292C"
+                android:textSize="15sp"
+                android:layout_marginLeft="30dp"
+                android:layout_centerVertical="true"
+                android:elevation="15dp"/>
+
+        </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:backgroundTint="#28292C"
+                android:background="?android:attr/listDivider"
+                /> <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="4dp"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D6DBE9"
+                android:id="@+id/setting_main_widget"
+                android:drawableLeft="@drawable/ic_flash_on_black_24dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Widget"
+                android:textColor="#28292C"
+                android:textSize="15sp"
+                android:layout_marginLeft="30dp"
+                android:layout_centerVertical="true"
+                android:elevation="15dp"/>
+
+        </RelativeLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>
+</layout>

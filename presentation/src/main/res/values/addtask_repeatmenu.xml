@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string-array name="Root">
+
+        <item>No Repeating</item>
+
+        <item>Every Hour</item>
+       <item>Every Day</item>
+ <item>Every Week</item>
+
+        <item>Every Month</item>
+        <item>Every Year</item>
+        <item>Selected Weekdays</item>
+         <item>Custom1</item>
+        <item>Custom2</item>
+
+    </string-array>
+
+
+
+    <string-array name="SelectedWeekDays">
+        <item>Sunday</item>
+        <item>Mondey</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+       <item>Thursday</item>
+    <item>Friday</item>
+    <item>Saturday</item>
+
+
+    </string-array>
+   <string-array name="Custom1">
+       <item>Hours</item>
+       <item>Days</item>
+       <item>Weeks</item>
+       <item>Months</item>
+       <item>Years</item>
+   </string-array>
+    <string-array name="Custom2">
+
+        <item>1st</item>
+        <item>2nd</item>
+        <item>3rd</item>
+        <item>4th</item>
+       <item>Last</item>
+
+
+    </string-array>
+
+    <string-array name="AdvancedReminder">
+        <item>No Advanced Reminder</item>
+        <item>5 minutes</item>
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>2 houres</item>
+        <item>3 hours</item>
+        <item>1 day</item>
+        <item>2 days</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#D6DBE9">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/addtask_categoridialog_imagebtn_red"
+                android:src="@drawable/ic_star_red_48dp"
+                android:background="#D6DBE9"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:id="@+id/addtask_categoridialog_imagebtn_blue"
+                android:layout_height="wrap_content"
+                android:background="#D6DBE9"
+                android:src="@drawable/ic_star_blue_48dp" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:id="@+id/addtask_categoridialog_imagebtn_green"
+                android:layout_height="wrap_content"
+                android:background="#D6DBE9"
+                android:src="@drawable/ic_star_green_48dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:id="@+id/addtask_categoridialog_imagebtn_yellow"
+                android:layout_height="wrap_content"
+                android:background="#D6DBE9"
+                android:src="@drawable/ic_star_yellow_48dp" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:id="@+id/addtask_categoridialog_imagebtn_default"
+                android:layout_height="wrap_content"
+                android:background="#D6DBE9"
+                android:src="@drawable/ic_star_border_black_48dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+</layout>

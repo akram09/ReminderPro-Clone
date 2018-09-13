@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+     <android.support.design.widget.AppBarLayout
+         android:layout_width="match_parent"
+         android:id="@+id/addtask_appbar"
+         android:layout_weight="0"
+         android:layout_height="wrap_content">
+
+         <android.support.design.widget.TextInputLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="12dp"
+             android:layout_marginLeft="12dp"
+             android:layout_marginRight="5dp"
+             >
+
+             <EditText
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/addtask_titleedittext"
+                 android:hint="Title"
+
+                 />
+
+
+         </android.support.design.widget.TextInputLayout>
+
+
+         <android.support.design.widget.TextInputLayout
+             android:layout_width="match_parent"
+             android:layout_marginLeft="12dp"
+             android:layout_marginRight="5dp"
+             android:layout_marginTop="9dp"
+             android:layout_marginBottom="12dp"
+             android:layout_height="wrap_content">
+
+             <EditText
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/addtask_description"
+                 android:hint="Description"/>
+
+
+         </android.support.design.widget.TextInputLayout>
+
+     </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#D6DBE9"
+        android:orientation="vertical"
+        >
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="15dp"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="12dp"
+
+
+          >
+          <Button
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#D6DBE9"
+              android:id="@+id/addtask_btn_date"
+              android:drawableLeft="@drawable/ic_event_note_black_24dp"
+             />
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Date"
+              android:textColor="#28292C"
+              android:textSize="19sp"
+              android:layout_marginLeft="48dp"
+              android:layout_centerVertical="true"
+              android:elevation="15dp"/>
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/addtask_textview_date"
+              android:text="20/07/2018"
+              android:elevation="18dp"
+              android:textColor="@color/colorPrimary"
+              android:textSize="18sp"
+              android:layout_alignParentEnd="true"
+              android:layout_centerVertical="true"
+              android:textStyle="bold"
+              />
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="?android:attr/listDivider"
+              android:layout_alignBottom="@id/addtask_btn_date"
+              />
+      </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+
+            android:layout_marginRight="12dp"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D6DBE9"
+                android:id="@+id/addtask_btn_time"
+                android:drawableLeft="@drawable/ic_access_alarm_black_24dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textColor="#28292C"
+                android:textSize="19sp"
+                android:layout_marginLeft="48dp"
+                android:layout_centerVertical="true"
+                android:elevation="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/addtask_textview_time"
+                android:text="20/07/2018"
+                android:elevation="18dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                android:layout_alignBottom="@id/addtask_btn_time"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="12dp"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D6DBE9"
+                android:id="@+id/addtask_btn_repeat"
+                android:drawableLeft="@drawable/ic_repeat_black_24dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Repeat"
+                android:textColor="#28292C"
+                android:textSize="19sp"
+                android:layout_marginLeft="48dp"
+                android:layout_centerVertical="true"
+                android:elevation="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/addtask_textview_repeat"
+                android:text="No Repeating "
+                android:elevation="18dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                android:layout_alignBottom="@id/addtask_btn_repeat"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="12dp"
+            android:id="@+id/addtask_relativelayout"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D6DBE9"
+                android:id="@+id/addtask_btn_enddate"
+                android:drawableLeft="@drawable/ic_event_black_24dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="End Date"
+                android:textColor="#28292C"
+                android:textSize="19sp"
+                android:layout_marginLeft="48dp"
+                android:layout_centerVertical="true"
+                android:elevation="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/addtask_textview_enddate"
+                android:text="Forever"
+                android:elevation="18dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                android:layout_alignBottom="@id/addtask_btn_enddate"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="12dp"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D6DBE9"
+                android:id="@+id/addtask_btn_advanceedreminder"
+                android:drawableLeft="@drawable/ic_alarm_add_black_24dp"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adv reminder"
+                android:textColor="#28292C"
+                android:textSize="19sp"
+                android:layout_marginLeft="48dp"
+                android:layout_centerVertical="true"
+                android:elevation="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/addtask_textview_advancedreminder"
+                android:text="None"
+                android:elevation="18dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                />
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/addtask_imagebtn_categorie"
+                android:background="#D6DBE9"
+                android:src="@drawable/ic_star_border_black_24dp"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="21dp"
+        app:fabSize="normal"
+        android:backgroundTint="@color/colorPrimary"
+        android:src="@drawable/ic_done_black_24dp"
+        android:id="@+id/addtask_fab"
+        />
+
+
+</RelativeLayout>
+</FrameLayout>
+</layout>

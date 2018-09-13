@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#D5DBEB"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/update_dialog"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:layout_centerHorizontal="true"
+        android:text="Task Title"
+        />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/update_dialog_description"
+            android:textColor="#747987"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:text="Task Description "
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="19dp"
+    android:layout_centerHorizontal="true"
+    android:layout_height="wrap_content">
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Repeat :: "
+         android:textColor="#747987"
+         android:textSize="18sp"
+         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task Repeat Type"
+        android:textSize="18sp"
+        android:id="@+id/update_dialog_repeat_type"
+        android:textColor="#747987"
+        android:layout_marginLeft="15dp"
+        />
+</LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="17dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next Run :: "
+            android:textSize="18sp"
+            android:textColor="#747987"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Task Repeat Type"
+            android:textSize="18sp"
+            android:textColor="#747987"
+            android:id="@+id/update_dialog_next_run"
+            android:layout_marginLeft="15dp"
+            />
+    </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:clickable="true"
+        android:linksClickable="true"
+        android:textStyle="bold"
+        android:textColor="#838895"
+        android:id="@+id/update_dialg_skip_run"
+        android:text="@string/skip_next_run"
+        android:layout_marginBottom="17dp"
+        />
+    </RelativeLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CAD0E4"
+    android:orientation="horizontal">
+   <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/update_dialog_dismiss_btn"
+       android:text="Dismiss"
+       android:textColor="#838895"
+       android:textSize="12sp"
+       android:background="#CAD0E4"
+       android:drawableTop="@drawable/ic_clear_black_24dp"
+       />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#838895"
+            android:text="Complete"
+            android:textSize="12sp"
+            android:background="#CAD0E4"
+            android:id="@+id/update_dialog_complete_btn"
+            android:drawableTop="@drawable/ic_done_all_black_24dp"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:textSize="12sp"
+            android:textColor="#838895"
+            android:background="#CAD0E4"
+            android:id="@+id/update_dialog_edit_btn"
+            android:drawableTop="@drawable/ic_edit_black_24dp"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:id="@+id/update_dialog_delete_btn"
+            android:textSize="12sp"
+            android:background="#CAD0E4"
+            android:textColor="#838895"
+            android:drawableTop="@drawable/ic_delete_black_24dp"
+            />
+
+</LinearLayout>
+</LinearLayout>
+</layout>

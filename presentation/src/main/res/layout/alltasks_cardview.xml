@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    app:cardBackgroundColor="@color/colorbackgroundbluewhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="12dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="3dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/alltasks_cardview_checked"
+                android:src="@drawable/ic_check_circle_black_24dp"
+                android:layout_margin="5dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Reminder Title"
+            android:id="@+id/alltasks_cardview_remindertitle"
+             android:textSize="21sp"
+            android:textColor="#3F4450"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_marginTop="2dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#8F93A1"
+        android:id="@+id/alltasks_cardview_reminderdate"
+        android:layout_marginRight="25dp"
+        android:text="12/12/2012"/>
+          <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+              android:textColor="#8F93A1"
+    android:id="@+id/alltasks_cardview_remindertime"
+    android:text="01:25"/>
+</LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="2dp"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#8F93A1"
+            android:id="@+id/alltasks_cardview_repeat"
+            android:text="One Time"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="12dp"
+                android:id="@+id/alltasks_cardview_categorie"
+                android:src="@drawable/ic_star_red_24dp"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#000"
+            android:layout_alignBottom="@id/addtask_btn_date"
+            />
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>
+</layout>

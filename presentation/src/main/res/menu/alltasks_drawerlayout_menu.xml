@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/alltasks_drawerlayout_menu_backuprestore"
+            android:title="Backup And Restore"
+            android:icon="@drawable/ic_database_grey600_24dp"
+            ></item>
+        <item android:id="@+id/alltasks_drawerlayout_menu_faq"
+            android:title="FAQ"
+            android:icon="@drawable/ic_help_black_24dp"
+            ></item>
+        <item android:id="@+id/alltasks_drawerlayout_menu_setting"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="Setting"></item>
+        <item android:id="@+id/alltasks_drawerlayout_menu_dailysummaryreminder"
+            android:title="Summary Reminder"
+            android:icon="@drawable/ic_assignment_black_24dp">
+            ></item>
+
+    <item android:title="">
+            <menu>
+
+                <item android:title="Join Us"
+                    android:id="@+id/alltasks_drawerlayout_menu_joinus"
+                    android:icon="@drawable/ic_facebook_box_grey600_24dp"
+                    ></item>
+
+            </menu> </item>
+
+
+
+
+    </group>
+
+</menu>

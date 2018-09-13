@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/addtask_repeatmenu_norepeating"
+       android:title="No Repeating"></item>
+    <item android:id="@+id/addtask_repeatmenu_everyhour"
+        android:title="Every Hour"></item>
+
+   <item android:title="Every Day" android:id="@+id/addtask_repeatmenu_everyday">
+
+       <menu>
+
+
+       </menu>
+
+   </item>
+
+
+
+
+
+
+</menu>

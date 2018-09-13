@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Themes">
+        <item>Midnight Blue (Light)</item>
+        <item>Teal (Light)</item>
+        <item>Blue Gray(Light)</item>
+        <item>Wedgewood (Light)</item>
+        <item>Poegranate (Light)</item>
+        <item> Grape (Light)</item>
+        <item>Night Rider (Light)</item>
+        <item>Rasperry (Light)</item>
+        <item>Shingle Fawn (Light)</item>
+        <item>Blue Lagoon (Light)</item>
+        <item>Pink (Light)</item>
+        <item>Deep Sea Green (Light)</item>
+        <item>Teal (Dark)</item>
+        <item>Dark Slate (Dark)</item>
+        <item>Denim (Dark)</item>
+        <item>Blue Lagoon (Dark)</item>
+        <item>Black (Dark)</item>
+        <item>Red Berry (Dark)</item>
+        <item>Blue Gray (Dark)</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ReminderClone</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open_drawer">Open</string>
+    <string name="close_drawer">Close</string>
+    <string name="skip_next_run"><u>Skip Next Run ?</u></string>
+</resources>

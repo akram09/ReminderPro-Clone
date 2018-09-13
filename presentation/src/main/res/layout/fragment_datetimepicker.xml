@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorbackgroundbluewhite"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="2dp"
+        android:layout_weight="0">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date Picker style"
+            android:textSize="18sp"
+            android:elevation="18dp"
+            android:textColor="#28292C"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calendar"
+            android:elevation="12dp"
+            android:id="@+id/setting_main_datepicker_textview"
+            android:textColor="#8F93A1"
+            android:textSize="17sp"
+            android:layout_alignBottom="@id/setting_main_datepicker_btn"/>
+        <Button
+            android:layout_width="match_parent"
+            android:elevation="5dp"
+            android:id="@+id/setting_main_datepicker_btn"
+            android:background="@color/colorbackgroundbluewhite"
+            android:layout_height="wrap_content"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="2dp"
+        android:backgroundTint="#28292C"
+        android:background="?android:attr/listDivider"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_weight="0">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Time Picker style"
+            android:textSize="18sp"
+            android:elevation="18dp"
+            android:textColor="#28292C"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clcok"
+            android:id="@+id/setting_main_timepicker_textview"
+            android:elevation="12dp"
+            android:textColor="#8F93A1"
+            android:textSize="17sp"
+            android:layout_alignBottom="@id/setting_main_timepicker_btn"/>
+        <Button
+            android:layout_width="match_parent"
+            android:id="@+id/setting_main_timepicker_btn"
+            android:background="@color/colorbackgroundbluewhite"
+            android:layout_height="wrap_content"
+            />
+
+
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="2dp"
+        android:backgroundTint="#28292C"
+        android:background="?android:attr/listDivider"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginBottom="2dp"
+        android:layout_weight="0">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="First day of the week"
+            android:textSize="18sp"
+            android:elevation="18dp"
+            android:textColor="#28292C"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sunday"
+            android:elevation="12dp"
+            android:textColor="#8F93A1"
+            android:textSize="17sp"
+            android:id="@+id/setting_main_firstday_textview"
+            android:layout_alignBottom="@id/setting_main_firstday_btn"/>
+        <Button
+            android:layout_width="match_parent"
+            android:id="@+id/setting_main_firstday_btn"
+            android:background="@color/colorbackgroundbluewhite"
+            android:layout_height="wrap_content"
+            />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
+</layout>
