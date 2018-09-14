@@ -22,12 +22,14 @@ import com.devs.kero.team7.learningrxjava.Utils.TaskMpper;
 import com.devs.kero.team7.learningrxjava.base.CompletePresenter;
 import com.devs.kero.team7.learningrxjava.contract.AddTaskContract;
 import com.devs.kero.team7.learningrxjava.di.PerActivity;
+import com.devs.kero.team7.learningrxjava.services.AlarmReceiver;
 import com.devs.kero.team7.learningrxjava.ui.dialog.AdvancedReminderDialog;
 import com.devs.kero.team7.learningrxjava.ui.dialog.CategorieDialog;
 import com.devs.kero.team7.learningrxjava.ui.dialog.Custom1Dialog;
 import com.devs.kero.team7.learningrxjava.ui.dialog.Custom2Dialog;
 import com.devs.kero.team7.learningrxjava.ui.dialog.RepeatDialog;
 import com.devs.kero.team7.learningrxjava.ui.dialog.SelectedWeekDaysDialog;
+import com.devs.kero.team7.learningrxjava.ui.fragments.AddTaskFragment;
 
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -39,11 +41,30 @@ import javax.inject.Inject;
 import io.reactivex.observers.DisposableCompletableObserver;
 
 @PerActivity
-public class AddTakPresenter extends CompletePresenter<AddTaskUseCase , AddTaskContract.View>
-        implements AddTaskContract.Presenter , RepeatDialog.RepeatHandle, SelectedWeekDaysDialog.SelectedweekdayListener
+public class AddTakPresenter implements AddTaskContract.Presenter , RepeatDialog.RepeatHandle, SelectedWeekDaysDialog.SelectedweekdayListener
            , AdvancedReminderDialog.AdvancedReminderListener, Custom2Dialog.clickListener
                         , CategorieDialog.OnclickListener {
-private TaskMpper mpper ;
+
+    private  AddTaskUseCase mVpInteractor;
+    private AddTaskFragment mVpView ;
+
+    public AddTaskUseCase getmMvpInteractor() {
+        return mVpInteractor;
+    }
+
+    public void setmVpInteractor(AddTaskUseCase mVpInteractor) {
+        this.mVpInteractor = mVpInteractor;
+    }
+
+    public AddTaskFragment getmMvpView() {
+        return mVpView;
+    }
+
+    public void setmVpView(AddTaskFragment mVpView) {
+        this.mVpView = mVpView;
+    }
+
+    private TaskMpper mpper ;
 private TaskView taskView;
 private RepeatDialog repeatDialog;
 private boolean isEndShown=false  ;
@@ -55,7 +76,7 @@ private CategorieDialog categorieDialog;
 private boolean ISUpdate ;
     @Inject
     public AddTakPresenter(AddTaskUseCase mMvpInteractor, TaskMpper mpper) {
-        super(mMvpInteractor);
+        this.mVpInteractor = mMvpInteractor;
         this.mpper = mpper;
         taskView = new TaskView();
     }
@@ -89,7 +110,7 @@ private boolean ISUpdate ;
                         e.printStackTrace();
                     }
                 } else {
-                    getmMvpInteractor().execute(new AddTaskObserver(), mpper.fromToAdd(taskView));
+                    getmMvpInteractor().execute(new AddTaskObserver(), mpper.fromToAdd(taskView), AlarmReceiver.class);
                 }
             }
 
@@ -398,4 +419,8 @@ private boolean ISUpdate ;
             }
     }
 
+    @Override
+    public void start() {
+
+    }
 }

@@ -2,8 +2,10 @@ package com.devs.kero.team7.domain.Repository;
 
 import com.devs.kero.team7.domain.entities.Task;
 
+import io.reactivex.Completable;
+
 public interface AlarmManagerDataSource {
 
-    void startAlarm(Task task);
-    void stopAlarm(Task task);
+    Completable startAlarm(Task task, Class<?> classe);
+    Completable stopAlarm(Task task);
 }

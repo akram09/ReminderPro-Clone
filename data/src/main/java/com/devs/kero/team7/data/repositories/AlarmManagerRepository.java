@@ -12,6 +12,9 @@ import com.devs.kero.team7.domain.entities.Task;
 import java.util.Calendar;
 import java.util.Date;
 
+import io.reactivex.Completable;
+import io.reactivex.functions.Action;
+
 public class AlarmManagerRepository implements AlarmManagerDataSource {
     AlarmManager alarmManager ;
     Context context ;
@@ -22,21 +25,29 @@ public class AlarmManagerRepository implements AlarmManagerDataSource {
     }
 
     @Override
-    public void startAlarm(Task task) {
-        Calendar calendar = Calendar.getInstance();
-        Date date= task.getDateTime();
-        calendar.setTimeInMillis(System.currentTimeMillis());
-        calendar.set(Calendar.HOUR_OF_DAY, 12);
-        calendar.set(Calendar.MINUTE, 32);
-//        calendar.set(date.getYear()+1900, date.getMonth()+1, date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds());
-//
-        Intent intent = new Intent(context, Receiver.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(context,0, intent, 0);
-        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(), AlarmManager.INTERVAL_FIFTEEN_MINUTES, pendingIntent );
-    }
+    public Completable startAlarm(final Task task,final Class<?> classe) {
+        return Completable.fromAction(new Action() {
+            @Override
+            public void run() throws Exception {
+                Calendar calendar = Calendar.getInstance();
+                Date date= task.getDateTime();
+                calendar.setTimeInMillis(System.currentTimeMillis());
+                calendar.set(Calendar.HOUR_OF_DAY, date.getHours());
+                calendar.set(Calendar.MINUTE, date.getMinutes());
+                Intent intent = new Intent(context,classe);
+                PendingIntent pendingIntent = PendingIntent.getBroadcast(context,(int)task.getTaskId(), intent, 0);
+                alarmManager.set(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(), pendingIntent );
+            }
+        });
+  }
 
     @Override
-    public void stopAlarm(Task task) {
+    public Completable stopAlarm(Task task) {
+   return Completable.fromAction(new Action() {
+       @Override
+       public void run() throws Exception {
 
+       }
+   });
     }
 }

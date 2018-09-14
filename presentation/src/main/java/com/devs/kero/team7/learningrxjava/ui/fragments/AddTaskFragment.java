@@ -44,7 +44,7 @@ public class AddTaskFragment extends BaseFragment  implements AddTaskContract.Vi
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_add_task, container,false );
-        presenter.setmMvpView(this);
+        presenter.setmVpView(this);
         if(getArguments()==null){
             presenter.init(false ,null);
         }else{
