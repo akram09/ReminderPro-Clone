@@ -18,6 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.activities.DialogActivity"
+            android:theme="@style/Theme.Transparent"></activity>
         <activity android:name=".ui.activities.SettingActivity"></activity>
         <activity android:name=".ui.activities.AddActivity"></activity>
     </application>

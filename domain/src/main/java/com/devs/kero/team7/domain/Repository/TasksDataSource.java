@@ -18,7 +18,7 @@ public interface TasksDataSource {
     Observable<List<Task>> getCompleteTasks();
     Observable<List<Task>> getActiveTasks();
 
-    Completable AddTask(Task task);
+    long AddTask(Task task);
 
     Completable UpdateTask(Task task);
 

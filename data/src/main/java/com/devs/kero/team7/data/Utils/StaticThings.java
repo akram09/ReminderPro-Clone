@@ -17,4 +17,18 @@ public class StaticThings {
    public static final String  DATE_PICKER_STYLE = "datepickerstyle";
    public static final String  TIME_PICKER_STYE = "timepickerstyle";
    public static final String  FIRST_DAY_OF_THE_WEEK ="firstdayoftheweek";
+   public static final String IS_THERE_DATA_IN_INTENT= "isThereDataInIntent";
+   public static final String REPEAT_TYPE = "repeatType";
+   public static final String REPEAT_BODY = "repeatBody";
+   public static final String TASK_ID= "taskid";
+   public static final String TASK_Name ="taskname";
+   public static final String TASK_DESCRIPTION= "taskdescription";
+   public static final String TASK_HASREPEAT = "taskhasrepeat";
+   public static final String TASK_REAPEAT_TYPE = "taskrepeattype";
+   public static final String TASK_REPEAT_BODY = "taskrepeatbody";
+   public static final String TASK_ADVANCED_REMINDER= "taskadvancedreminder";
+   public static final String TASK_DATE_TIME="tasksdatetime";
+   public static final String TASK_END_DATE = "taskenddate";
+   public static final String TASK_CATEGORIE ="taskcategorie";
+
 }

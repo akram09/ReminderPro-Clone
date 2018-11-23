@@ -18,6 +18,6 @@ public class DeleteAllTasksUseCase extends BaseCompletableUseCase<Void> {
 
     @Override
     public Completable getObservable(Void...objects) {
-        return dataSource.DeletAllTsks();
+        return dataSource.DeletAllTsks(); //todo
     }
 }

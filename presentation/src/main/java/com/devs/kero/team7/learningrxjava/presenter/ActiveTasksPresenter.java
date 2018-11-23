@@ -3,6 +3,7 @@ package com.devs.kero.team7.learningrxjava.presenter;
 import com.devs.kero.team7.data.mapper.TaskMapper;
 import com.devs.kero.team7.domain.UseCases.AddTaskUseCase;
 import com.devs.kero.team7.domain.UseCases.BaseCompletableUseCase;
+import com.devs.kero.team7.domain.UseCases.CompleteTaskUseCase;
 import com.devs.kero.team7.domain.UseCases.DeleteActiveTaskUseCase;
 import com.devs.kero.team7.domain.UseCases.DeleteAllTasksUseCase;
 import com.devs.kero.team7.domain.UseCases.DeleteTasksUseCase;
@@ -14,6 +15,7 @@ import com.devs.kero.team7.learningrxjava.Utils.TaskMpper;
 import com.devs.kero.team7.learningrxjava.base.Presenter;
 import com.devs.kero.team7.learningrxjava.contract.ActiveTasksContract;
 import com.devs.kero.team7.learningrxjava.di.PerActivity;
+import com.devs.kero.team7.learningrxjava.services.AlarmReceiver;
 import com.devs.kero.team7.learningrxjava.ui.dialog.UpdateDialog;
 
 import java.text.ParseException;
@@ -30,8 +32,10 @@ import io.reactivex.observers.DisposableObserver;
 public class ActiveTasksPresenter extends MainScreenPresenter<getActiveTaskUseCase, ActiveTasksContract.View>  implements  ActiveTasksContract.PRESENTER{
   @Inject
   DeleteActiveTaskUseCase deleteuseCase ;
+//@Inject
+//    UpdateUseCase updateUseCase ;
 @Inject
-    UpdateUseCase updateUseCase ;
+    CompleteTaskUseCase completeTaskUseCase;
     @Inject
     public ActiveTasksPresenter(getActiveTaskUseCase mMvpInteractor, DeleteTasksUseCase deleteTasksUseCase,  TaskMpper taskMapper) {
         super(mMvpInteractor,taskMapper, deleteTasksUseCase);
@@ -50,7 +54,7 @@ public class ActiveTasksPresenter extends MainScreenPresenter<getActiveTaskUseCa
     public void handleCompleteOrActive(TaskView taskView) {
         taskView.setComplete(true);
         try {
-            updateUseCase.execute(new UpdateObserver(), new Task[]{mpper.from(taskView)});
+            completeTaskUseCase.execute(new UpdateObserver(), mpper.from(taskView));
         } catch (ParseException e) {
             e.printStackTrace();
         }

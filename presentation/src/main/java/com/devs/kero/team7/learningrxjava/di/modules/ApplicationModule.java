@@ -17,6 +17,7 @@ import com.devs.kero.team7.domain.executors.PostExecuteThread;
 import com.devs.kero.team7.domain.executors.ThreadExecutor;
 import com.devs.kero.team7.learningrxjava.Threads.UiThread;
 import com.devs.kero.team7.learningrxjava.Utils.MyApp;
+import com.devs.kero.team7.learningrxjava.services.AlarmReceiver;
 
 import javax.inject.Singleton;
 
@@ -66,6 +67,6 @@ public class ApplicationModule {
     }
     @Singleton @Provides
     public AlarmManagerDataSource provideAlarmManagerDataSource(Context context, AlarmManager alarmManager){
-        return new AlarmManagerRepository(alarmManager, context);
+        return new AlarmManagerRepository(alarmManager, context , AlarmReceiver.class);
     }
 }

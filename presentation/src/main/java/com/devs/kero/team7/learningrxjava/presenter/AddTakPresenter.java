@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
+import android.util.Log;
 import android.widget.DatePicker;
 import android.widget.NumberPicker;
 import android.widget.TimePicker;
@@ -83,6 +84,7 @@ private boolean ISUpdate ;
     class AddTaskObserver extends DisposableCompletableObserver{
         @Override
         public void onComplete() {
+            Log.d("Debuging", "onComplete: "+taskView.getRepeatType());
         getmMvpView().goBackToGetTasks();
 
         }
@@ -97,7 +99,7 @@ private boolean ISUpdate ;
     public void addTask(String Title, String Description) {
 
             if (Title == null || Title.isEmpty()) {
-                taskView.setTaskTitle("[:Title:}");
+                taskView.setTaskTitle("[:Title:]");
             } else {
                 taskView.setTaskTitle(Title);
             }
@@ -110,7 +112,7 @@ private boolean ISUpdate ;
                         e.printStackTrace();
                     }
                 } else {
-                    getmMvpInteractor().execute(new AddTaskObserver(), mpper.fromToAdd(taskView), AlarmReceiver.class);
+                    getmMvpInteractor().execute(new AddTaskObserver(), mpper.fromToAdd(taskView));
                 }
             }
 
@@ -177,6 +179,7 @@ private boolean ISUpdate ;
                 getmMvpView().showEndDate();
                 isEndShown = true;
                 getmMvpView().changeRepeatTypeTextView(strings[i]);
+                taskView.setHasRepeat(true);
                 taskView.setRepeatType("Simple");
                 taskView.setRepeatBody(strings[i]);
             } else if(i>=6){
@@ -194,12 +197,14 @@ private boolean ISUpdate ;
                 }
 
             }else{
+                taskView.setHasRepeat(false);
                 taskView.setRepeatType("None");
                 taskView.setRepeatBody(null);
             }
         if(isEndShown && i==0 ){
                taskView.setRepeatType("None");
                taskView.setRepeatBody(null);
+               taskView.setHasRepeat(false);
                 getmMvpView().hideEndDate();
                 getmMvpView().changeRepeatTypeTextView(strings[0]);
                 isEndShown = false ;
@@ -247,6 +252,7 @@ private boolean ISUpdate ;
                 stringArrayList.add(ShortedDays[i]);
             }
         }
+        taskView.setHasRepeat(true);
         taskView.setRepeatType("SelectedWeekDays");
         taskView.setRepeatBody(sb.toString());
         String[] strings = new String[stringArrayList.size()];
@@ -325,6 +331,7 @@ private boolean ISUpdate ;
             taskView.setAdvancedRemind(bundle.getString("advancedReminder"));
             taskView.setRepeatType(bundle.getString("repeatType"));
             taskView.setRepeatBody(bundle.getString("repeatbody"));
+            taskView.setHasRepeat(false );
             if(taskView.getRepeatBody()==null){
               taskView.setEndDate(new Date(112, 11, 12));
             }else{
@@ -408,12 +415,14 @@ private boolean ISUpdate ;
             if(numberPicker==null){
                 String[] strings  = getmMvpView().getStringArray(R.array.Custom1) ;
                 taskView.setRepeatType("Custom1");
-                taskView.setRepeatBody((i<10?'0'+String.valueOf(i):String.valueOf(i))+strings[i1]);
+                taskView.setHasRepeat(false);
+                taskView.setRepeatBody((i==100?'e':'f')+(i<10?'0'+String.valueOf(i):String.valueOf(i))+strings[i1]);
                 getmMvpView().changeRepeatTypeTextView("Every "+String.valueOf(i)+" "+strings[i1]);
             }else {
                 final String[] weekdays = getmMvpView().getStringArray(R.array.SelectedWeekDays);
                 final String[] strings = getmMvpView().getStringArray(R.array.Custom2);
                 taskView.setRepeatType("Custom2");
+                taskView.setHasRepeat(false);
                 taskView.setRepeatBody(strings[i]+weekdays[i1]);
                 getmMvpView().changeRepeatTypeTextView("Every " + strings[i] + " " + weekdays[i1]);
             }

@@ -34,8 +34,13 @@ public class AddTaskUseCase  {
     }
 
 
-   public void execute(DisposableCompletableObserver disposableCompletableObserver, Task task , Class<?> classe){
-       Completable completable = dataSource.AddTask(task).andThen(alarmManagerDataSource.startAlarm(task, classe))
+   public void execute(DisposableCompletableObserver disposableCompletableObserver,final  Task task ){
+       Completable completable = Completable.fromAction(new Action() {
+           @Override
+           public void run() throws Exception {
+              task.setTaskId( dataSource.AddTask(task)) ;
+           }
+       }).andThen(alarmManagerDataSource.startAlarm(task))
                .subscribeOn(Schedulers.from(threadExecutor)).observeOn(postExecuteThread.getScheduler());
        addDisposable(completable.subscribeWith(disposableCompletableObserver));
 

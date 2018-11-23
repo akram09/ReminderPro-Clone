@@ -18,8 +18,6 @@ public class CategorieToInt  {
             case 4 : return Yellow ;
             default:return Defeult ;
         }
-
-
     }
 
 

@@ -134,13 +134,9 @@ public class TaskRepository implements TasksDataSource {
     }
 
     @Override
-    public Completable AddTask(final Task task) {
-        return Completable.fromAction(new Action() {
-            @Override
-            public void run() throws Exception {
-                Dao.insertTask(taskMapper.mapToAdd(task));
-            }
-        });
+    public long AddTask(final Task task) {
+        return Dao.insertTask(taskMapper.mapToAdd(task));
+
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.devs.kero.team7.domain.UseCases;
 
+import com.devs.kero.team7.domain.Repository.AlarmManagerDataSource;
 import com.devs.kero.team7.domain.Repository.TasksDataSource;
 import com.devs.kero.team7.domain.entities.Task;
 import com.devs.kero.team7.domain.executors.PostExecuteThread;
@@ -12,6 +13,7 @@ import javax.inject.Inject;
 import io.reactivex.Completable;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Action;
 import io.reactivex.observers.DisposableCompletableObserver;
 import io.reactivex.schedulers.Schedulers;
 
@@ -21,17 +23,19 @@ public class DeleteTasksUseCase  {
    public CompositeDisposable disposables ;
     PostExecuteThread postExecuteThread;
     ThreadExecutor threadExecutor ;
+    AlarmManagerDataSource alarmManagerDataSource ;
 
     @Inject
-    public DeleteTasksUseCase(TasksDataSource dataSource, PostExecuteThread postExecuteThread, ThreadExecutor threadExecutor) {
+    public DeleteTasksUseCase( AlarmManagerDataSource alarmManagerDataSource, TasksDataSource dataSource, PostExecuteThread postExecuteThread, ThreadExecutor threadExecutor) {
         this.dataSource = dataSource;
         this.postExecuteThread = postExecuteThread;
         this.threadExecutor = threadExecutor;
         disposables=  new CompositeDisposable();
     }
 
-    public void execute(DisposableCompletableObserver observer, List<Task> tasks){
-        Completable observable = getObservable(tasks).
+    public void execute(DisposableCompletableObserver observer, final List<Task> tasks){
+        Completable observable = getObservable(tasks).andThen(
+                alarmManagerDataSource.stopAlarms(tasks )).
                 subscribeOn(Schedulers.from(threadExecutor)).observeOn(postExecuteThread.getScheduler());
         addDisposable(observable.subscribeWith(observer));
 
